@@ -118,7 +118,7 @@ spacy-loggers==1.0.4
 SQLAlchemy==1.4.49
 sqlitedict==2.1.0
 srsly==2.4.7
-streamlit~=1.21.0
+streamlit==1.23.1
 sympy==1.12
 tenacity==8.2.2
 thinc==8.1.10
