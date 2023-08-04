@@ -1,0 +1,30 @@
+import os
+from embeddings import generate_embedding
+from search_query_pinecone import search_index
+from openAI_utils import chatGPT_retriever
+
+
+def allurion(query):
+    # Load API keys from environment variables
+    pinecone_api_key = os.environ.get("PINECONE_API_KEY")
+    openai_api_key = os.environ.get("OPENAI_API_KEY")
+
+    # Generate embeddings for the query
+    embeddings = generate_embedding(query)
+
+    # Search Pinecone index for recipe metadata
+    search_index_retrieve = search_index(
+        api_key=pinecone_api_key,
+        index_name="allurion",
+        topkN=1,
+        vector=embeddings,
+        environment="gcp-starter"
+    )
+
+    # Retrieve recipe metadata from search results
+    pinecone_response = search_index_retrieve["matches"][0]["metadata"]["desc"]
+
+    # Use OpenAI ChatGPT3.5 to get a response for the recipe metadata
+    chatGPT_response = chatGPT_retriever(query=pinecone_response, api_key=openai_api_key)
+
+    return chatGPT_response
