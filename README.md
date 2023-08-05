@@ -3,6 +3,11 @@
 ## 👋 Introduction
 The ChatGPT Recipe Bot is a conversational AI application that uses a Kaggle dataset filled with ingredients and recipes to generate wonderful recipes based on user queries. The bot utilizes various technologies, including Pinecone for vector database storage, Streamlit for the user interface, GPT-3.5 for natural language understanding and generation, and Sentence Transformers with MPNet base model for generating embeddings.
 
+## Demo
+Test Demo here - https://allurion.streamlit.app/
+![image](https://github.com/devshahofficial/allurion/assets/49101333/8c394c4c-672a-40a0-8a23-d3242363975d)
+
+
 ## 🎯 Objectives:
 The primary objectives of this project are to:
 - **Develop a conversational AI application**: Create a user-friendly chatbot using GPT-3.5 to interact with users, understand their queries, and generate recipe suggestions.
