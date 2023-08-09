@@ -1,4 +1,4 @@
-# Allurion AI - Your personal Health Coach
+# Smart Bot AI - Your personal Health Coach
 
 ## 👋 Introduction
 The ChatGPT Recipe Bot is a conversational AI application that uses a Kaggle dataset filled with ingredients and recipes to generate wonderful recipes based on user queries. The bot utilizes various technologies, including Pinecone for vector database storage, Streamlit for the user interface, GPT-3.5 for natural language understanding and generation, and Sentence Transformers with MPNet base model for generating embeddings.
